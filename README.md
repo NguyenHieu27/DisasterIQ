@@ -95,6 +95,10 @@ streamlit run app.py
 4. Optimization: Resource allocation and pricing adjustments
 5. Visualization: Dashboard display and API access
 
+## Dashboard Access
+
+Access our interactive dashboard on Streamlit: [DisasterIQ Dashboard](https://disasteriq.streamlit.app/)
+
 ## Current Project Status
 This project is currently in development as part of Hacklytics 2025. The features and components described in this README represent our planned implementation and architectural vision.
 
