@@ -6,7 +6,7 @@ DisasterIQ aims to create an advanced disaster management platform that will com
 ## Proposed Architecture
 
 <div style="text-align: center;">
-  <img src="DisasterIQ_System_Architecture.jpg" alt="DisasterIQ_System_Architecture">
+  <img src="DisasterIQ_System_Architecture.png" alt="DisasterIQ_System_Architecture">
 </div>
 
 
