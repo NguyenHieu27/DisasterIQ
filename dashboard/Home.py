@@ -30,14 +30,14 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-    ### Dashboard
+    ### 🚀 Dashboard
     Access real-time monitoring and key metrics
     """)
     st.link_button("Go to Dashboard", "Dashboard")
 
 with col2:
     st.markdown("""
-    ### Risk Analysis
+    ### 🔍 Risk Analysis
     View detailed risk assessments and analysis
     """)
     st.link_button("Go to Risk Analysis", "Risk Analysis")
@@ -46,14 +46,14 @@ col3, col4 = st.columns(2)
 
 with col3:
     st.markdown("""
-    ### Anomaly Detection
+    ### 🚨 Anomaly Detection
     Monitor and detect unusual patterns
     """)
     st.link_button("Go to Anomaly Detection", "Anomaly Detection")
 
 with col4:
     st.markdown("""
-    ### Inventory Management
+    ### 💸 Inventory Management
     Optimize inventory levels and forecasting
     """)
     st.link_button("Go to Inventory Management", "Inventory Management")
