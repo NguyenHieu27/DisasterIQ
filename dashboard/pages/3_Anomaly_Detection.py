@@ -6,7 +6,7 @@ import numpy as np
 
 st.set_page_config(
     page_title="Anomaly Detection - DisasterIQ",
-    page_icon=":siren:",
+    page_icon="🚨",
     layout="wide"
 )
 
