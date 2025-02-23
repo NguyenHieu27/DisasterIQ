@@ -79,7 +79,7 @@ DisasterIQ aims to create an advanced disaster management platform that will com
 
 ### Proposed Installation Process
 ```bash
-git https://github.com/NguyenHieu27/DisasterIQ/
+git clone https://github.com/NguyenHieu27/DisasterIQ/
 ```
 
 ### Development Setup
