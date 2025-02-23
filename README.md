@@ -1,4 +1,4 @@
-# Hacklytics 2025: DisasterIQ Intelligent Disaster Management Platform
+# Hacklytics 2025: DisasterIQ - Intelligent Disaster Management Platform
 
 ## Vision & Goals
 DisasterIQ aims to create an advanced disaster management platform that will combine real-time data analytics, machine learning, and predictive modeling to revolutionize disaster response and risk management. This README outlines our planned features and architectural vision.
