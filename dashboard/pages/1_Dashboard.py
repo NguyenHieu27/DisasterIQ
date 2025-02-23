@@ -19,6 +19,7 @@ def fetch_data(endpoint):
         response = requests.get(f"{API_URL}/{endpoint}")
         return response.json()
     except Exception as e:
+        st.error(f"Error fetching data from {endpoint}: {e}")
         return None
 
 col1, col2, col3, col4 = st.columns(4)
@@ -30,6 +31,22 @@ with col3:
     st.metric(label="Risk Score", value="82%", delta="3%")
 with col4:
     st.metric(label="Inventory Status", value="Optimal", delta="↑")
+
+# # Fetch inflation and weather data
+# inflation_data = fetch_data("api/inflation")
+# weather_data = fetch_data("api/weather")
+
+# # Display inflation data
+# if inflation_data:
+#     st.subheader("Inflation Data")
+#     df_inflation = pd.DataFrame(inflation_data)
+#     st.dataframe(df_inflation)
+
+# # Display weather data
+# if weather_data:
+#     st.subheader("Weather Data")
+#     df_weather = pd.DataFrame(weather_data)
+#     st.dataframe(df_weather)
 
 # Real-time monitoring section
 st.subheader("Real-Time Monitoring")

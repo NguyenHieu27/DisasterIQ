@@ -6,7 +6,7 @@ import numpy as np
 
 st.set_page_config(
     page_title="Inventory Management - DisasterIQ",
-    page_icon="🔍",
+    page_icon="💸",
     layout="wide"
 )
 
