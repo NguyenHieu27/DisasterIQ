@@ -5,6 +5,11 @@ DisasterIQ aims to create an advanced disaster management platform that will com
 
 ## Proposed Architecture
 
+<div style="text-align: center;">
+  <img src="DisasterIQ_System_Architecture.jpg" alt="DisasterIQ_System_Architecture">
+</div>
+
+
 ### Market Insights AI Engine 
 - Integration with Open-Meteo API for real-time weather data
 - Integration with OpenFEMA for disaster-related data
