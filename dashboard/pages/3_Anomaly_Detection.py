@@ -3,11 +3,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
 
 st.set_page_config(
     page_title="Anomaly Detection - DisasterIQ",
-    page_icon="🔍",
+    page_icon=":siren:",
     layout="wide"
 )
 
@@ -36,7 +35,8 @@ with col3:
 
 # Generate sample data with anomalies
 np.random.seed(42)
-dates = pd.date_range(start='2024-01-01', periods=1000, freq='5T')
+current_time = pd.Timestamp.now()
+dates = pd.date_range(end=current_time, periods=1000, freq='5T')  # End at current time
 normal_data = np.random.normal(100, 10, 1000)
 anomalies = np.random.randint(0, 1000, 20)
 normal_data[anomalies] += np.random.normal(50, 10, 20)

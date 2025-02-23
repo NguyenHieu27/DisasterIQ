@@ -6,7 +6,7 @@ import requests
 
 st.set_page_config(
     page_title="Dashboard",
-    page_icon=":bar_chart:",
+    page_icon="🚀",
     layout="wide"
 )
 
@@ -21,7 +21,7 @@ def fetch_data(endpoint):
     except Exception as e:
         return None
 
-col1, col2, col3, col4 = st.column(4)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     st.metric(label="Active Risks", value="127", delta="5")
 with col2:
@@ -34,9 +34,10 @@ with col4:
 # Real-time monitoring section
 st.subheader("Real-Time Monitoring")
 
+current_time = pd.Timestamp.now()
 chart_data = pd.DataFrame({
-    'timestamp': pd.date_range(start = '2025-01-01', periods = 100, freq = "H"),
-    'risk_score': np.random.randint(50, 90, size = 100) # Will be replaced with actual risk score
+    'timestamp': pd.date_range(end=current_time, periods=100, freq="h"),  # End at current time
+    'risk_score': np.random.randint(50, 90, size=100)  # Will be replaced with actual risk score
 })
 
 fig = px.line(chart_data, x='timestamp', y='risk_score')

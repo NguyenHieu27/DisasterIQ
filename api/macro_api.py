@@ -80,3 +80,26 @@ if "observations" in data:
 
 else:
     print("❌ API Error:", data)
+
+def get_inflation_data():
+    API_KEY = "f738d9d4d13f3345328f8720c487fc98"
+    SERIES_ID = "CPIAUCSL"
+    end_date = datetime.datetime.today().strftime('%Y-%m-%d')
+    start_date_36m = (datetime.datetime.today() - datetime.timedelta(days=36*30)).strftime('%Y-%m-%d')
+    BASE_URL = "https://api.stlouisfed.org/fred/series/observations"
+    params = {
+        "series_id": SERIES_ID,
+        "api_key": API_KEY,
+        "file_type": "json",
+        "observation_start": start_date_36m,
+        "observation_end": end_date,
+    }
+    response = requests.get(BASE_URL, params=params)
+    data = response.json()
+    if "observations" in data:
+        df = pd.DataFrame(data["observations"])
+        df["date"] = pd.to_datetime(df["date"])
+        df["inflation"] = pd.to_numeric(df["value"], errors="coerce")
+        return df.to_dict(orient='records')
+    else:
+        return {"error": "API Error", "details": data}
